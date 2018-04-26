@@ -6,4 +6,5 @@
     <color name="colorSecondaryDark">#0039cb</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorText">#ffffff</color>
+    <color name="colorTextBackground">#ccc4a0</color>
 </resources>
