@@ -33,15 +33,15 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingButton"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
         android:background="@color/colorSecondary"
         android:onClick="OpenDocument"
-        >
-    </android.support.design.widget.FloatingActionButton>
+        app:backgroundTint="@color/colorSecondary"
+        app:srcCompat="@android:drawable/ic_menu_add"></android.support.design.widget.FloatingActionButton>
 
 </RelativeLayout>

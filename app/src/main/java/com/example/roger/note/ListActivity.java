@@ -14,7 +14,6 @@ public class ListActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private cardAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
