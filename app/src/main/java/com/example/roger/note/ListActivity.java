@@ -1,6 +1,7 @@
 package com.example.roger.note;
 
 import android.content.Intent;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,16 +9,24 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private cardAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+
+    private int count = 0;
+
+    public String path = Environment.getExternalStorageDirectory()+"/Note";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        File dir = new File(path);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -46,5 +55,12 @@ public class ListActivity extends AppCompatActivity {
     public void OpenDocument(View v){
         Intent i = new Intent(this, DocumentActivity.class);
         startActivity(i);
+    }
+
+    public void CreateDocument(View v){
+        File file = new File(path + "newFile"+count+".txt");
+        count++;
+        OpenDocument(v);
+
     }
 }

@@ -30,4 +30,16 @@ public class itemCard {
     }
 
 
+    public void setmImageResource(int mImageResource) {
+        this.mImageResource = mImageResource;
+    }
+
+    public void setmTextTitle(String mTextTitle) {
+        this.mTextTitle = mTextTitle;
+    }
+
+    public void setmDate(String mDate) {
+        this.mDate = mDate;
+    }
+
 }
